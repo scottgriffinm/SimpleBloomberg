@@ -1,4 +1,5 @@
 import blpapi
+import csv
 '''
 SimpleBloomberg: A simple wrapper for the Bloomberg API
 
@@ -16,6 +17,17 @@ def __startSession():
     session.start()
     return session
 
+def saveToCSV(data, filename):
+    '''
+    :param data: dictionary of lists, each list is a column of data
+    :param filename: string, name of file to save to
+    '''
+    with open(filename, mode='w',newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(data.keys())
+        for row in zip(*data.values()):
+            writer.writerow(row)
+    
 def getHistoricalPrices(securities, start_date, end_date, frequency, fields='PX_LAST'):
     '''
     :param securities: string or list of strings in format TICKER EXCHANGE ex: 'IBM US Equity'
@@ -53,7 +65,9 @@ def getHistoricalPrices(securities, start_date, end_date, frequency, fields='PX_
                 for element in fieldData:
                     dates.append(element.getElementAsString('date'))
                     prices.append(element.getElementAsFloat('PX_LAST'))
-                data[securityData.getElementAsString('security')] = {'dates': dates, 'prices': prices}
+                if 'dates' not in data.keys():
+                    data['Date'] = dates
+                data[securityData.getElementAsString('security') + ' Price'] = prices
         if event.eventType() == blpapi.Event.RESPONSE:
             break
 
