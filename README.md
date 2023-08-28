@@ -15,5 +15,5 @@ pip install blpapi
 ```
 import SimpleBloomberg as sb
 # get IBM & AAPL daily closing prices for the period of 4/27/2010 to 5/1/2010
-data = sb.getHistoricalPrices(['IBM US Equities','AAPL US Equities'], '20100427', '20100501', 'DAILY', fields='PX_LAST')
+data = sb.getHistoricalPrices(['IBM US Equity','AAPL US Equity'], '20100427', '20100501', 'DAILY', fields='PX_LAST')
 ```
