@@ -2,7 +2,7 @@
 
 A simple wrapper for the Bloomberg Terminal API, it currently can only retrieve historical prices.
 
-Quickstart:
+Quickstart:\n
 (1) On a computer with Bloomberg Terminal open, install the Bloomberg api in a command prompt:
 >>> pip install blpapi
 (2) Create a Python script in the same folder as SimpleBloomberg.py and paste this code.
