@@ -1,5 +1,1 @@
-development_pile/test.py
-development_pile/test2.py
-development_pile/test3.py
-development_pile/test4.py
-__pycache__/SimpleBloomberg.cpython-38.pyc
+.gitignore
