@@ -7,7 +7,7 @@ Quickstart:
 (1) On a computer with Bloomberg Terminal open, install the Bloomberg Python API in a command prompt:
 
 ```
-pip install blpapi
+python -m pip install --index-url=https://bcms.bloomberg.com/pip/simple blpapi
 ```
 
 (2) Create a Python script in the same folder as SimpleBloomberg.py and paste the following code:
