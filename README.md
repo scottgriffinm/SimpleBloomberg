@@ -1,6 +1,6 @@
 # SimpleBloomberg.py
 
-A simple wrapper for the Bloomberg Terminal API, currently only retrieves historical prices.
+A simple wrapper for the Bloomberg Terminal Python API, currently only retrieves historical prices.
 
 Quickstart:
 
