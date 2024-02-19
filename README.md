@@ -6,7 +6,7 @@ Quickstart:
 
 (1) On your computer, open the Bloomberg terminal application and log in. Make sure to keep the application open throughout this process.
 
-(2) Open the command line and install the Bloomberg Python API libraries:
+(2) Open the command line and install the Bloomberg Python API libraries (you need to have privledges to change PATH variables on your computer):
 ```
 python -m pip install --index-url=https://bcms.bloomberg.com/pip/simple blpapi
 ```
